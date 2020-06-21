@@ -1,0 +1,81 @@
+
+<h1>Update Movie</h1>
+<div class="container">
+
+    <fieldset class="form-group">
+        
+        <label>Description</label>
+<input type="text" class="form-control" [(ngModel)]="movie.desc"   name="description"   required="required">
+    </fieldset>
+    
+    <fieldset class="form-group">
+    
+    <label>ID</label>
+   <input type="text" class="form-control" [(ngModel)]="movie.id"   name="id"   required="required">   
+    </fieldset>
+    
+ 
+    <fieldset class="form-group">
+    
+    <label>ImageUrl</label>
+   <input type="text" class="form-control" [(ngModel)]="movie.imgUrl"   name="imgUrl"   required="required">   
+    </fieldset>
+    <!--<fieldset class="form-group">
+    <div>
+    <label>
+		<input type="file"  class="form-control" [(ngModel)]="movie.imgUrl"   name="imgUrl"   required="required"  >
+		</label>
+		<button [disabled]="!selectedFiles"
+                            (click)="upload()">Upload</button>
+    </div>
+    </fieldset>-->
+   <!--
+    <fieldset class="form-group" >
+    <div >
+	<label >
+		<input type="file" (change)="selectFile($event)"  >
+		</label>
+		<button [disabled]="!selectedFiles"
+(click)="upload()">Upload</button>
+	</div>
+        </fieldset>-->
+    
+    
+    <fieldset class="form-group">
+    
+    <label>Rate</label>
+<input type="text" class="form-control" [(ngModel)]="movie.rate"   name="rate"   required="required">
+    </fieldset>
+    
+    
+    <fieldset class="form-group">
+    
+    <label>movie Name</label>
+<input type="text" class="form-control" [(ngModel)]="movie.movieName"    name="movieName"   required="required">
+    </fieldset>
+    
+    
+    
+    
+    
+    
+    <fieldset  class="form-group">
+        
+         <label>ReleaseDate</label>
+<input type="date"   class="form-control"    [ngModel]= "movie.rdate | date:'yyyy-MM-dd' " 
+       
+       (ngModelChange)="movie.rdate= $event"
+       
+       name="releaseDate"   required="required">
+</fieldset>
+    
+     <fieldset class="form-group">
+        
+        <label>Movie Comments</label>
+<input type="text" class="form-control" [(ngModel)]="movie.comment"   name="comment"   required="required">
+    </fieldset>
+    
+    
+    <button class="btn btn-success" (click)="savemovie()">Save</button>
+    
+</div>

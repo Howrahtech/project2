@@ -1,0 +1,12 @@
+
+<div class="alert alert-warning" *ngIf='invalidCredential'>{{errorMassage}}</div>
+
+<div>
+    
+username :<input type="text" name="username"  [(ngModel)]="username"/><br><br>
+password :<input type="password" name="password" [(ngModel)]="password"/><br><br>
+<!--<button (click)=handlelogin() class="btn btn-success">sign-in</button>-->
+    <!--<button (click)=basicAuthlogin() class="btn btn-success">sign-in</button>-->
+   <button (click)=JWTbasicAuthlogin() class="btn btn-success">sign-in</button> 
+    
+</div>
